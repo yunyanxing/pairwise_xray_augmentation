@@ -33,7 +33,7 @@ class BaseOptions():
 		parser.add_argument('--model', type=str, default='pix2pix',
 												help='chooses which model to use. pix2pix, test')
 		parser.add_argument('--direction', type=str, default='AtoB', help='AtoB or BtoA')
-		parser.add_argument('--epoch', type=str, default='4',
+		parser.add_argument('--epoch', type=str, default='latest',
 												help='which epoch to load? set to latest to use latest cached model')
 		parser.add_argument('--num_threads', default=4, type=int, help='# threads for loading data')
 		parser.add_argument('--checkpoints_dir', type=str, default='./checkpoints', help='models are saved here')

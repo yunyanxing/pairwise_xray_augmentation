@@ -1,8 +1,7 @@
 # Adversarial Pulmonary Pathology Translation for Pairwise Chest X-ray Data Augmentation
 
-<br>
-This repository contains a Pytorch implementation of the MICCAI 2019 paper "Adversarial Pulmonary Pathology Translation for Pairwise Chest X-ray Data Augmentation".
 
+This repository contains a Pytorch implementation of the MICCAI 2019 paper "Adversarial Pulmonary Pathology Translation for Pairwise Chest X-ray Data Augmentation".  
 
 Y. Xing, Z. Ge,  R. Zeng, D. Mahapatra, J. Seah, M. Law and T. Drummond, "Adversarial Pulmonary Pathology Translation for Pairwise Chest X-ray Data Augmentation", *International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI)*, 2019.
 
@@ -32,22 +31,26 @@ Unzip this folder into datasets/dataset:
 unzip Preprocessed_Images.zip -d datasets/dataset
 ```
 
-If you wish to pre-process your own data, use datasets/generate_paired_images.py to create bounding box only images (with orignal images and bounding box labels) and datasets/combine_A_and_B.py to pair bounding box images with original images for input to the Pix2Pix model. This works for data arranged in the same style as the [NIH dataset](https://nihcc.app.box.com/v/ChestXray-NIHCC "NIH dataset").
+If you wish to pre-process your own data, use datasets/generate_paired_images.py to create bounding box only images (with original images and bounding box labels) and datasets/combine_A_and_B.py to pair bounding box images with original images for input to the Pix2Pix model. This works for data arranged in the same style as the [NIH dataset](https://nihcc.app.box.com/v/ChestXray-NIHCC "NIH dataset").
 
 ### Training
 
 Run the following to train (set GPU ID to desired ID, or -1 for CPU):
 
- ```bash
+```bash
 python3 train.py --dataroot ./datasets/dataset/Combined --name xray_pix2pix --model pix2pix --direction AtoB --gpu_ids 0
 ```
+
+Models and example images are saved throughout training in the checkpoints/xray_pix2pix directory.
 
 ### Generate Fake Images
 
 Following training, to generate fake images run:
-```
+```bash
 python3 test.py --dataroot ./datasets/dataset/Combined --name xray_pix2pix --model pix2pix --direction AtoB --gpu_ids 0
 ```
+
+Images will be saved in the checkpoints/xray_pix2pix/fake_images directory.
 
 ## Cites
 
@@ -69,5 +72,7 @@ booktitle={Computer Vision and Pattern Recognition (CVPR), 2017 IEEE Conference 
 year={2017}
 }
 ```
+
+
 
 

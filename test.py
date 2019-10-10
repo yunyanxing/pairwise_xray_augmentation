@@ -16,7 +16,7 @@ if __name__ == '__main__':
 	dataset = data_loader.load_data()
 	model = create_model(opt)
 	model.setup(opt)
-	save_dir = os.path.join(opt.checkpoints_dir, opt.name, "1st_epoch")
+	save_dir = os.path.join(opt.checkpoints_dir, opt.name, "fake_images")
 	if not os.path.exists(save_dir):
 		os.mkdir(save_dir)
 	# pix2pix: we use batchnorm and dropout in the original pix2pix. You can experiment it with and without eval() mode.
