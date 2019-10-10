@@ -51,19 +51,22 @@ python3 test.py --dataroot ./datasets/dataset/Combined --name xray_pix2pix --mod
 ### Cites
 
 If you use this code, please cite our paper:
-> @inproceedings{xing2019pairwise,
-  title={Adversarial Pulmonary Pathology Translation for Pairwise Chest X-ray Data   Augmentation},
-  author={Xing, Yunyan and Ge, Zongyuan and Zeng, Rui and Mahapatra, Dwarikanath and Seah, Jarrel and Law, Meng and Drummond, Tom},
-  booktitle={International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI)},
-  year={2019}
+```
+@inproceedings{xing2019pairwise,
+title={Adversarial Pulmonary Pathology Translation for Pairwise Chest X-ray Data   Augmentation},
+author={Xing, Yunyan and Ge, Zongyuan and Zeng, Rui and Mahapatra, Dwarikanath and Seah, Jarrel and Law, Meng and Drummond, Tom},
+booktitle={International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI)},
+year={2019}
 }
-
+```
 Please also cite the Pix2Pix paper (which our code is built upon):
-> @inproceedings{isola2017image,
-  title={Image-to-Image Translation with Conditional Adversarial Networks},
-  author={Isola, Phillip and Zhu, Jun-Yan and Zhou, Tinghui and Efros, Alexei A},
-  booktitle={Computer Vision and Pattern Recognition (CVPR), 2017 IEEE Conference on},
-  year={2017}
+```
+@inproceedings{isola2017image,
+title={Image-to-Image Translation with Conditional Adversarial Networks},
+author={Isola, Phillip and Zhu, Jun-Yan and Zhou, Tinghui and Efros, Alexei A},
+booktitle={Computer Vision and Pattern Recognition (CVPR), 2017 IEEE Conference on},
+year={2017}
 }
+```
 
 
