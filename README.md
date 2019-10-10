@@ -3,6 +3,7 @@
 <br>
 This repository contains a Pytorch implementation of the MICCAI 2019 paper "Adversarial Pulmonary Pathology Translation for Pairwise Chest X-ray Data Augmentation".
 
+
 Y. Xing, Z. Ge,  R. Zeng, D. Mahapatra, J. Seah, M. Law and T. Drummond, "Adversarial Pulmonary Pathology Translation for Pairwise Chest X-ray Data Augmentation", *International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI)*, 2019.
 
 The code is built upon the pytorch implementation of [Pix2Pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix "Pix2Pix").
@@ -28,10 +29,10 @@ Pre-processed X-ray images used in the paper can be found by clicking [here](htt
 
 Unzip this folder into datasets/dataset:
 ```bash
-unzip Preprocessed_Images.zip datasets/dataset
+unzip Preprocessed_Images.zip -d datasets/dataset
 ```
 
-If you wish to pre-process your own data, use datasets/generate_paired_images.py to create bounding box only images (with orignal images and bounding box labels) and datasets/combined_A_and B.py to pair bounding box images with original images for input to the Pix2Pix model. This works for data arrange in the same style as the [NIH dataset](https://nihcc.app.box.com/v/ChestXray-NIHCC "NIH dataset").
+If you wish to pre-process your own data, use datasets/generate_paired_images.py to create bounding box only images (with orignal images and bounding box labels) and datasets/combine_A_and_B.py to pair bounding box images with original images for input to the Pix2Pix model. This works for data arranged in the same style as the [NIH dataset](https://nihcc.app.box.com/v/ChestXray-NIHCC "NIH dataset").
 
 ### Training
 
@@ -48,7 +49,7 @@ Following training, to generate fake images run:
 python3 test.py --dataroot ./datasets/dataset/Combined --name xray_pix2pix --model pix2pix --direction AtoB --gpu_ids 0
 ```
 
-### Cites
+## Cites
 
 If you use this code, please cite our paper:
 ```
